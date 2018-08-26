@@ -1,0 +1,9 @@
+ docker build -t angularclient .
+
+docker run -it --rm -p 9001:4200 -v ${pwd}/src:/app/src angularclient 
+
+docker login
+
+docker tag angularclient karthik3030/angularclient
+
+docker push karthik3030/angularclient
